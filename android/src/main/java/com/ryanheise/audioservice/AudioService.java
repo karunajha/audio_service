@@ -645,6 +645,7 @@ public class AudioService extends MediaBrowserServiceCompat implements AudioMana
 			if (listener == null) return;
 			listener.onPause();
 			unregisterNoisyReceiver();
+			stopForeground(false);
 		}
 
 		@Override
